@@ -1,4 +1,4 @@
-# Install script for directory: D:/dummy
+# Install script for directory: D:/Finding_all_candidate_keys
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/dummy/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Finding_all_candidate_keys/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

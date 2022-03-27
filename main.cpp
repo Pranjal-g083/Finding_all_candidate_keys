@@ -94,7 +94,12 @@ int main() {
         
     cout<<answer.size()<<endl;
     for(int i=0;i<answer.size();i++){
-        cout<<answer[i]<<endl;
+        for(int j=0;j<n;j++)
+            {
+                if(answer[i]&((1<<(j))))
+                    cout<<j+1<<" ";
+            }
+        cout<<endl;
     }
     return 0;
 }

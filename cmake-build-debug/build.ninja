@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = D$:/dummy/cmake-build-debug/
+cmake_ninja_workdir = D$:/Finding_all_candidate_keys/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target dummy
 
@@ -49,7 +49,7 @@ cmake_ninja_workdir = D$:/dummy/cmake-build-debug/
 
 build cmake_object_order_depends_target_dummy: phony || CMakeFiles/dummy.dir
 
-build CMakeFiles/dummy.dir/main.cpp.obj: CXX_COMPILER__dummy_Debug D$:/dummy/main.cpp || cmake_object_order_depends_target_dummy
+build CMakeFiles/dummy.dir/main.cpp.obj: CXX_COMPILER__dummy_Debug D$:/Finding_all_candidate_keys/main.cpp || cmake_object_order_depends_target_dummy
   DEP_FILE = CMakeFiles\dummy.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\dummy.dir
@@ -81,7 +81,7 @@ build dummy.exe: CXX_EXECUTABLE_LINKER__dummy_Debug CMakeFiles/dummy.dir/main.cp
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\dummy\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2021.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D D:\Finding_all_candidate_keys\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2021.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -92,7 +92,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\dummy\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2021.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SD:\dummy -BD:\dummy\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D D:\Finding_all_candidate_keys\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2021.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SD:\Finding_all_candidate_keys -BD:\Finding_all_candidate_keys\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -110,7 +110,7 @@ build dummy: phony dummy.exe
 # =============================================================================
 
 #############################################
-# Folder: D:/dummy/cmake-build-debug
+# Folder: D:/Finding_all_candidate_keys/cmake-build-debug
 
 build all: phony dummy.exe
 
