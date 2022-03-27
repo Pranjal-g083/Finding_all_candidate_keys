@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+bool comp(int a,int b)
+{
+    if(__builtin_popcount(a)==__builtin_popcount(b))
+        return a<b;
+    else
+        return __builtin_popcount(a)<__builtin_popcount(b);
+}
 
 int main() {
     int n,k;
@@ -20,7 +26,7 @@ int main() {
             if(ch == '\n' or ch == EOF)
                 break;
         }
-        
+
         int x;
         x=integer_first.size();
         int num=0;
@@ -28,7 +34,7 @@ int main() {
         {
             num|=(1<<(integer_first[i]-1));
         }
-        
+
         int z;
         vector <int> integer_second;
         while(1)
@@ -41,9 +47,9 @@ int main() {
             if(ch == '\n' or ch == EOF)
                 break;
         }
-        
-        
-        
+
+
+
         y=integer_second.size();
         int num1=0;
         for(int i=0;i<y;i++)
@@ -72,7 +78,7 @@ int main() {
         while(s!=num&&flag) {
             s = num;
             for (auto x: m) {
-                
+
                 if ((num & x.first) == x.first){
                     num |= x.second;
                 }
@@ -83,7 +89,7 @@ int main() {
         if(flag&&num==((1<<n)-1))
             ar[i]=true;
     }
-    
+
     vector<int> answer;
     for(int i=1;i<(1<<n);i++)
         if(ar[i])
@@ -91,14 +97,14 @@ int main() {
             answer.push_back(i);
             // cout<<i<<endl;
         }
-        
+    sort(answer.begin(),answer.end(),comp);
     cout<<answer.size()<<endl;
     for(int i=0;i<answer.size();i++){
         for(int j=0;j<n;j++)
-            {
-                if(answer[i]&((1<<(j))))
-                    cout<<j+1<<" ";
-            }
+        {
+            if(answer[i]&((1<<(j))))
+                cout<<j+1<<" ";
+        }
         cout<<endl;
     }
     return 0;
