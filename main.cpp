@@ -21,10 +21,6 @@ int main() {
                 break;
         }
         
-        
-        
-        
-        
         int x;
         x=integer_first.size();
         int num=0;
