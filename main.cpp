@@ -8,23 +8,51 @@ int main() {
     multimap<int ,int> m;
     for(int i=0;i<k;i++)
     {
+        int y;
+        vector <int> integer_first;
+        while(1)
+        {
+            cin >> y;
+            // cout << y << ' ';
+            integer_first.push_back(y);
+            // peek next charcter w/o extracting it
+            char ch = cin.peek();
+            if(ch == '\n' or ch == EOF)
+                break;
+        }
+        
+        
+        
+        
+        
         int x;
-        cin>>x;
+        x=integer_first.size();
         int num=0;
         for(int i=0;i<x;i++)
         {
-            int a;
-            cin>>a;
-            num|=(1<<(a-1));
+            num|=(1<<(integer_first[i]-1));
         }
-        int y;
-        cin>>y;
+        
+        int z;
+        vector <int> integer_second;
+        while(1)
+        {
+            cin >> z;
+            // cout << z << ' ';
+            integer_second.push_back(z);
+            // peek next charcter w/o extracting it
+            char ch = cin.peek();
+            if(ch == '\n' or ch == EOF)
+                break;
+        }
+        
+        
+        
+        y=integer_second.size();
         int num1=0;
         for(int i=0;i<y;i++)
         {
-            int a;
-            cin>>a;
-            num1|=(1<<(a-1));
+            num1|=(1<<(integer_second[i]-1));
         }
         m.insert(pair<int,int>(num,num1));
 //        cout<<num<<" "<<num1<<endl;
@@ -48,8 +76,10 @@ int main() {
         while(s!=num&&flag) {
             s = num;
             for (auto x: m) {
-                if (num & x.first == x.first)
+                
+                if ((num & x.first) == x.first){
                     num |= x.second;
+                }
             }
 
 
@@ -57,10 +87,18 @@ int main() {
         if(flag&&num==((1<<n)-1))
             ar[i]=true;
     }
+    
+    vector<int> answer;
     for(int i=1;i<(1<<n);i++)
         if(ar[i])
         {
-            cout<<i<<endl;
+            answer.push_back(i);
+            // cout<<i<<endl;
         }
+        
+    cout<<answer.size()<<endl;
+    for(int i=0;i<answer.size();i++){
+        cout<<answer[i]<<endl;
+    }
     return 0;
 }
